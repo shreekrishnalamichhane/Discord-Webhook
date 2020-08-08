@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord WebHook</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container bg-white" style="height: 100vh;">
+        <div class="row py-3 bg-primary">
+            <div class="col-12">
+                <div class="text-center text-white">
+                    <h5>Discord Webhook With<br> Voice Recognition</h5>
+                </div>
+            </div>
+        </div>
+        <div class="space-15"></div>
+        <div class="row">
+            <div class="d-none col-12 text-center alert alert-success" id="message-send-successful">
+                <h5 class="text-success py-2">Message Send Successfully.</h5>
+            </div>
+
+            <div class="d-none col-12 text-center alert alert-danger" id="message-send-unsuccessful">
+                <h5 class="text-danger py-2 text-center">Message Send Failed.<br> Look at the console for more details.</h5>
+            </div>
+            <div class="col-12">
+                <!-- <textarea name="" id="message-box" cols="30" rows="10" style="width: 100%;"></textarea> -->
+                <div class="md-form md-outline">
+                    <textarea type="text" id="message-box" class="md-textarea form-control" disabled rows="5" placeholder="Your Message Here.."></textarea>
+                    <!-- <label for="message-box" class="">Your Message Here..</label> -->
+                  </div>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+                <div class="switch">
+                    <label>
+                      Non-continious
+                      <input type="checkbox" id="continiousSwitch">
+                      <span class="lever"></span> Continious
+                    </label>
+                </div>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+                <!-- <canvas style="border: 1px solid red;" id="AudioGraph" width="500" height="500"></canvas> -->
+                <canvas id="demo" width="20" height="100" data-val="0">No canvas</canvas>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+                <a href="#Start" id="StartBtn" class="btn-success btn-floating waves-effect waves-light " onclick="StartMeter()" data-toggle="tooltip" data-placement="top" title="" data-original-title="Start Recording"><i class="fas fa-microphone-alt"></i></a>
+                <a href="#Stop" id="StopBtn" class="btn-danger btn-floating waves-effect waves-light d-none" onclick="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Stop Recording"><i class="fas fa-microphone-alt-slash"></i></a>
+            </div>
+            <div class="col-12 d-flex justify-content-center py-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="autoSendMSG">
+                    <label class="form-check-label" for="autoSendMSG">Auto Send Message <a href="" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="If enabled, Message will be send automatically when you stop talking."><i class="fas fa-info-circle"></i></a></label>
+                  </div>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+                <a href="#SendMessage" id="SendBtn" onclick="" class="btn btn-outline-primary btn-rounded" onclick="" >Send Message</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="js/mdb.min.js"></script>
+<script src="js/volume-meter.js"></script>
+<script src="js/vumeter.js"></script>
+<script src="js/draw-audio-graph.js"></script>
+<script src="js/speech-recognition.js"></script>
+<script src="js/send-message-to-discord.js"></script>
+    <script>
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
+    <script>
+        
+
+    </script>
+</html>
