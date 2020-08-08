@@ -1,4 +1,4 @@
-const whurl = "https://discordapp.com/api/webhooks/739160582078595183/3xdsggfkkAxGuGbM4YERs8tFidlSQ-VNMcGNw6zeEin4j5CLGHBBhIzt9iPezBAMJGlX";
+var whurl = 'NULL';
 const autoSend = document.querySelector("#autoSendMSG");
 const SendBtn = document.querySelector("#SendBtn");
 const MessageSuccess = document.querySelector("#message-send-successful");
@@ -21,6 +21,7 @@ function SendMSG(){
     Send();
   });
     function Send(){
+       whurl = document.getElementById("webhookurl").value;
       const msg = {
         "content": document.querySelector("#message-box").value
       }

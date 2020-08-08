@@ -76,7 +76,7 @@ function gotStream(stream) {
 }
 function drawLoop( ) {
     setTimeout( function(){
-        console.log("xzjczjxcnzxkc " + meter.volume * FACTOR );
+        // console.log("xzjczjxcnzxkc " + meter.volume * FACTOR );
         demo.setAttribute('data-val',meter.volume * FACTOR );
     // set up the next visual callback
     rafID = window.requestAnimationFrame( drawLoop );
